@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DirectChat">
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/country_code_picker"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="8dp"
+        android:layout_marginLeft="24dp"
+        android:background="@drawable/rounded_corner"
+        app:ccp_contentColor="@color/black"
+        app:ccp_defaultPhoneCode="92"
+        app:ccp_hintExampleNumber="true"
+        app:ccp_showArrow="true"
+        app:ccp_showNameCode="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.37">
+
+    </com.hbb20.CountryCodePicker>
+
+    <EditText
+        android:id="@+id/et_mobile_number"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingStart="16dp"
+        android:hint="@string/enter_phone_number"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintTop_toBottomOf="@+id/country_code_picker"
+        android:layout_margin="8dp"
+        />
+
+    <EditText
+        android:id="@+id/et_massage"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:paddingStart="16dp"
+        android:hint="@string/enter_phone_number"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintTop_toBottomOf="@+id/et_mobile_number"
+        android:layout_margin="8dp"
+        />
+    <Button
+        android:id="@+id/btn_send_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send_message"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintTop_toBottomOf="@+id/et_massage"
+        android:layout_margin="8dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
